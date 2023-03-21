@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Web\\API\\API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj",
+        "projectName": "MTDataAccess",
+        "projectPath": "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Web\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Web\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Web\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\KJ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Web\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\KJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj": {
+                "projectPath": "C:\\Users\\KJ\\Desktop\\MultiTracks_Assessment\\attempt_1\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

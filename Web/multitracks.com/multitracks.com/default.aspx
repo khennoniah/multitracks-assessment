@@ -104,7 +104,7 @@
                                         <li><%#Eval("text") %></li>
                                     </ItemTemplate>
                                 </asp:Repeater>
-                            </ul>
+                            </ul> 
 
                         </div>
                      </div>
