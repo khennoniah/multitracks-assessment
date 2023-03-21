@@ -1,27 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using DataAccess;
 using System.Data;
-using Newtonsoft.Json.Linq;
+
+using DataAccess;
+using static API.Models.ArtistModel;
 
 namespace API.Controllers
 {
-    public class Artist
-    {
-        public string title { get; set; }
-        public string biography { get; set; }
-        public string imageURL { get; set; }
-        public string heroURL { get; set; }
-    }
 
     [Route("api/[controller]")]
     [ApiController]
     public class ArtistController : ControllerBase
     {
 
-        // GET api/artist/search
-        [HttpGet("search/{name}")]
-        public ActionResult<DataTable> Get(string name)
+        // GET api/artist/search?name=
+        [HttpGet("search")]
+        public ActionResult<DataTable> Get([FromQuery] string name)
         {
             
             string[] query = {
@@ -47,10 +40,6 @@ namespace API.Controllers
             new SQL().Execute(query[0]);
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        // TODO: put everything inside try/catch statements for errors
     }
 }

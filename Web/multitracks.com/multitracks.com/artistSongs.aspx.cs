@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-public partial class artistDetails : ArtistDetailsPage
+public partial class artistSongs : ArtistSongsPage
 {
 
     protected void Page_Load(object sender, EventArgs e)
@@ -19,7 +19,6 @@ public partial class artistDetails : ArtistDetailsPage
                 // TODO: probably should do this more dynamically
                 // in case the order of the SP changes
                 ExtractArtistData(data.Tables[0]);
-                ExtractAlbumData(data.Tables[1]);
                 ExtractSongData(data.Tables[2]);
 
             }
@@ -34,11 +33,6 @@ public partial class artistDetails : ArtistDetailsPage
 
     }
 
-    protected void ExtractAlbumData(DataTable albumDT) {
-        albums.DataSource = albumDT;
-        albums.DataBind();
-    }
-
     protected void ExtractArtistData(DataTable artistDT)
     {
         hero.ImageUrl = Convert.ToString(artistDT.Rows[0]["heroURL"]);
@@ -51,8 +45,6 @@ public partial class artistDetails : ArtistDetailsPage
         name_link.Text = Convert.ToString(artistDT.Rows[0]["title"]);
         name_link.DataBind();
 
-        bio.Text = Convert.ToString(artistDT.Rows[0]["biography"]);
-        bio.DataBind();
     }
 
     protected void ExtractSongData(DataTable songDT)

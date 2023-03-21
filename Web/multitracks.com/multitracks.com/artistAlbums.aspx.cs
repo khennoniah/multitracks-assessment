@@ -20,8 +20,6 @@ public partial class artistDetails : ArtistDetailsPage
                 // in case the order of the SP changes
                 ExtractArtistData(data.Tables[0]);
                 ExtractAlbumData(data.Tables[1]);
-                ExtractSongData(data.Tables[2]);
-
             }
             catch
             {
@@ -50,16 +48,5 @@ public partial class artistDetails : ArtistDetailsPage
 
         name_link.Text = Convert.ToString(artistDT.Rows[0]["title"]);
         name_link.DataBind();
-
-        bio.Text = Convert.ToString(artistDT.Rows[0]["biography"]);
-        bio.DataBind();
-    }
-
-    protected void ExtractSongData(DataTable songDT)
-    {
-        // TODO: how do I determine "top" songs?
-        topSongs.DataSource = songDT;
-        topSongs.DataBind();
-
     }
 }
