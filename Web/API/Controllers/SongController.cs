@@ -20,10 +20,12 @@ namespace API.Controllers
         public IEnumerable<DataRow> Get([FromQuery] RequestParams requestParams)
         {
 
+            // get data
             DataTable data = new SQL().ExecuteDT( "SELECT * FROM song ORDER BY dateCreation");
 
-            // Each row will have the full table included as an attribute. Extracting only the
-            // necessary information would probably be worthwile
+            // Pagination:
+            // grab "PageSize" number of items starting with
+            // the item at index [PageSize * (PageNumber - 1)]
             var result = data.AsEnumerable()
                 .Skip(requestParams.PageSize * (requestParams.PageNumber - 1))
                 .Take(requestParams.PageSize);

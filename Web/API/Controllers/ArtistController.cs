@@ -39,7 +39,5 @@ namespace API.Controllers
 
             new SQL().Execute(query[0]);
         }
-
-        // TODO: put everything inside try/catch statements for errors
     }
 }

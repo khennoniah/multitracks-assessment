@@ -4,10 +4,15 @@
     {
         public class RequestParams
         {
+            // max number of items per page
             const int maxPageSize = 10;
-            public int PageNumber { get; set; } = 1;
+            // default number of items per page
             private int _pageSize = 5;
 
+            // page to start at
+            public int PageNumber { get; set; } = 1;
+
+            // number of items per page
             public int PageSize
             {
                 get { return _pageSize; }
