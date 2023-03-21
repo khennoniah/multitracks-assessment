@@ -4,5 +4,8 @@ DB/bin/
 DB/obj/
 Web/multitracks.com/multitracks.com/Bin/
 packages/
+
+Web/API/bin
+Web/API/obj
 *.jfm
 *.dbmdl
