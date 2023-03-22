@@ -17,20 +17,23 @@ namespace API.Controllers
 
         // GET api/song/list?pageSize=&pageNumber=
         [HttpGet("list")]
-        public IEnumerable<DataRow> Get([FromQuery] RequestParams requestParams)
+        public IEnumerable<Song> Get([FromQuery] RequestParams requestParams)
         {
 
             // get data
             DataTable data = new SQL().ExecuteDT( "SELECT * FROM song ORDER BY dateCreation");
 
-            // Pagination:
-            // grab "PageSize" number of items starting with
-            // the item at index [PageSize * (PageNumber - 1)]
-            var result = data.AsEnumerable()
+            // this will paginate the data, but each row will still contain the whole table as an attribute
+            /* IEnumerable<DataRow> rowResult = data.AsEnumerable()
                 .Skip(requestParams.PageSize * (requestParams.PageNumber - 1))
+                .Take(requestParams.PageSize);*/
+
+            // convert the DataRows to Song objects and then paginate
+            IEnumerable<Song> list = (from row in data.AsEnumerable() select new Song(row)).ToList();
+            var objResult = list.Skip(requestParams.PageSize * (requestParams.PageNumber - 1))
                 .Take(requestParams.PageSize);
             
-            return result;
+            return objResult;
         } 
     }
 }
